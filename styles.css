@@ -351,15 +351,6 @@ h1 em {
   background: var(--surface);
 }
 
-.hero-index {
-  position: absolute;
-  right: 0;
-  bottom: 1.5rem;
-  color: var(--line);
-  font-family: var(--serif);
-  font-size: 5rem;
-}
-
 .section {
   display: grid;
   grid-template-columns: 0.42fr 1fr;
