@@ -1,91 +1,81 @@
 "use strict";
 
-/** Return the visitor's preferred theme, honoring a saved selection first. */
-function getPreferredTheme() {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light" || savedTheme === "dark") return savedTheme;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-}
+const SCAN_STEPS = [
+  { progress: 14, message: "> Locating the scan button you just pressed..." },
+  { progress: 38, message: "> Checking whether confidence is enabled... yes." },
+  { progress: 63, message: "> Politely declining to inspect your files..." },
+  { progress: 87, message: "> Converting uncertainty into a green checkmark..." },
+  { progress: 100, message: "> Scan complete. Evidence successfully avoided." },
+];
 
-/** Apply a theme and keep browser chrome and assistive text in sync. */
-function applyTheme(theme) {
-  const isDark = theme === "dark";
-  document.documentElement.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]').content = isDark ? "#14201d" : "#f4f0e8";
-  const toggle = document.querySelector("[data-theme-toggle]");
-  toggle.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} theme`);
-}
-
-/** Initialize and persist the light/dark theme control. */
-function initializeTheme() {
-  const toggle = document.querySelector("[data-theme-toggle]");
-  applyTheme(getPreferredTheme());
-  toggle.addEventListener("click", () => {
-    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", nextTheme);
-    applyTheme(nextTheme);
-  });
-}
-
-/** Toggle the compact navigation and close it after link selection. */
+/** Toggle the mobile navigation and close it after a destination is selected. */
 function initializeMenu() {
   const toggle = document.querySelector("[data-menu-toggle]");
   const navigation = document.querySelector("[data-mobile-nav]");
-  const label = toggle.querySelector(".sr-only");
+  if (!toggle || !navigation) return;
 
   toggle.addEventListener("click", () => {
     const isOpen = toggle.getAttribute("aria-expanded") === "true";
     toggle.setAttribute("aria-expanded", String(!isOpen));
-    label.textContent = isOpen ? "Open menu" : "Close menu";
+    toggle.querySelector(".sr-only").textContent = isOpen ? "Open menu" : "Close menu";
     navigation.classList.toggle("is-open", !isOpen);
   });
 
   navigation.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       toggle.setAttribute("aria-expanded", "false");
-      label.textContent = "Open menu";
+      toggle.querySelector(".sr-only").textContent = "Open menu";
       navigation.classList.remove("is-open");
     });
   });
 }
 
-/** Reveal page sections once as they enter the viewport. */
-function initializeReveals() {
-  const elements = document.querySelectorAll(".reveal");
-  if (!window.IntersectionObserver) {
-    elements.forEach((element) => element.classList.add("is-visible"));
-    return;
-  }
+/** Run the deliberately fake scanner through a bounded list of comic status steps. */
+function runFakeScan(button, line, progressBar, result) {
+  if (!button || !line || !progressBar || !result) return;
+  let stepIndex = 0;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -40px" },
-  );
+  button.disabled = true;
+  button.textContent = "Pretending very carefully...";
+  result.hidden = true;
+  progressBar.style.width = "0%";
 
-  elements.forEach((element) => observer.observe(element));
+  const intervalId = window.setInterval(() => {
+    const step = SCAN_STEPS[stepIndex];
+    line.textContent = step.message;
+    progressBar.style.width = `${step.progress}%`;
+    stepIndex += 1;
+
+    if (stepIndex < SCAN_STEPS.length) return;
+    window.clearInterval(intervalId);
+    result.hidden = false;
+    button.disabled = false;
+    button.textContent = "Scan absolutely nothing again";
+  }, 430);
 }
 
-/** Condense the header after the page starts moving. */
-function initializeHeader() {
-  const header = document.querySelector("[data-header]");
-  const updateHeader = () => header.classList.toggle("is-scrolled", window.scrollY > 16);
-  window.addEventListener("scroll", updateHeader, { passive: true });
-  updateHeader();
+/** Connect the fake scan button to its harmless visual demonstration. */
+function initializeScanner() {
+  const button = document.querySelector("[data-scan-button]");
+  const line = document.querySelector("[data-scan-line]");
+  const progressBar = document.querySelector("[data-scan-progress]");
+  const result = document.querySelector("[data-scan-result]");
+  if (!button || !line || !progressBar || !result) return;
+
+  button.addEventListener("click", () => runFakeScan(button, line, progressBar, result));
 }
 
-/** Initialize the small progressive enhancements used by the site. */
+/** Populate the current year without requiring a manual annual update. */
+function initializeYear() {
+  const year = document.querySelector("[data-year]");
+  if (year) year.textContent = String(new Date().getFullYear());
+}
+
+/** Initialize all progressive enhancements used by the parody site. */
 function initializePage() {
-  initializeTheme();
   initializeMenu();
-  initializeReveals();
-  initializeHeader();
-  document.querySelector("[data-year]").textContent = String(new Date().getFullYear());
+  initializeScanner();
+  initializeYear();
 }
 
 initializePage();
