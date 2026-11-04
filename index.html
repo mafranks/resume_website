@@ -1,231 +1,378 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Franks' AV Warehouse: antivirus confidence without all the detecting. A parody website."
+      content="Matthew Franks is a cybersecurity product support and escalation engineering leader with 11+ years at Cisco and 20 years of military service and cyber leadership."
     />
-    <meta name="theme-color" content="#f5b82e" />
-    <meta property="og:title" content="Franks' AV Warehouse" />
-    <meta property="og:description" content="We don't mark anything malicious!" />
+    <meta name="theme-color" content="#f4f0e8" />
+    <meta property="og:title" content="Matthew Franks | Cybersecurity Product Support Leader" />
+    <meta
+      property="og:description"
+      content="Technical team leadership, critical escalation management, support operations, practical AI, and military service."
+    />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://matthew-franks.com/" />
     <link rel="canonical" href="https://matthew-franks.com/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
-    <title>Franks' AV Warehouse | Suspiciously Reassuring Antivirus</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Matthew Franks",
+        "url": "https://matthew-franks.com/",
+        "jobTitle": "Cybersecurity Product Support and Escalation Engineering Leader",
+        "email": "mailto:matthew.franks@protonmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Clayton",
+          "addressRegion": "NC",
+          "addressCountry": "US"
+        },
+        "sameAs": ["https://www.linkedin.com/in/matthewfranks"]
+      }
+    </script>
+    <title>Matthew Franks | Cybersecurity Product Support Leader</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Franks' AV Warehouse, home">
-        <span class="brand-mark" aria-hidden="true">F/AV</span>
-        <span class="brand-copy">
-          <strong>Franks' AV Warehouse</strong>
-          <small>Bulk confidence. Wholesale protection-ish.</small>
-        </span>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Matthew Franks, home">
+        <span class="brand-mark" aria-hidden="true">MF</span>
+        <span class="brand-name">Matthew Franks</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#inventory">Inventory</a>
-        <a href="#scanner">Free scan</a>
-        <a href="#guarantee">Our guarantee</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Selected work</a>
+        <a href="#contact">Contact</a>
       </nav>
 
-      <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span>
-        <span class="sr-only">Open menu</span>
-      </button>
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to dark theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.5"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 15.7A8.5 8.5 0 0 1 8.3 3.5a8.5 8.5 0 1 0 12.2 12.2Z"></path>
+          </svg>
+        </button>
+        <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+      </div>
 
       <nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
-        <a href="#inventory">Inventory</a>
-        <a href="#scanner">Free scan</a>
-        <a href="#guarantee">Our guarantee</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Selected work</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span>Warehouse direct</span> Antivirus, probably</p>
-          <h1 id="hero-title">We don't mark anything <em>malicious!</em></h1>
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Product support leader · escalation manager · retired Army CW3</p>
+          <h1 id="hero-title">The difference between chaos and success is <em>clear communication.</em></h1>
           <p class="hero-intro">
-            Stop letting antivirus software ruin a perfectly good download. Our patented Zero-Detection Engine™
-            delivers the result you wanted before the scan even starts.
+            I’m Matthew Franks, a cybersecurity product support and escalation engineering leader with 11+ years at
+            Cisco. I lead Tier 3 support, guide critical customer escalations, coach engineers, and build clearer,
+            more repeatable support operations. Twenty years of military service shaped how I lead: stay calm,
+            communicate clearly, develop people, and own the outcome.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#scanner">Scan something harmless</a>
-            <a class="button button-secondary" href="#inventory">Shop the warehouse</a>
+            <a class="button button-primary" href="#experience">Explore my experience</a>
           </div>
-          <p class="fine-print">* Results guaranteed to be reassuring. Accuracy sold separately.</p>
         </div>
 
-        <div class="hero-visual" aria-label="A fake antivirus scan showing zero threats">
-          <div class="warehouse-label">
-            <span>LOT 000</span>
-            <span>INSPECTED-ISH</span>
-          </div>
-          <div class="scanner-window">
-            <div class="window-bar">
-              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-              <span>FRANKS_AV.EXE</span>
-              <span>v0.0.0</span>
-            </div>
-            <div class="scanner-body">
-              <div class="status-orbit" aria-hidden="true">
-                <span class="status-shield">✓</span>
-              </div>
-              <p class="status-label">Warehouse status</p>
-              <p class="status-value">EVERYTHING'S FINE</p>
-              <div class="status-row">
-                <span>Files thoughtfully ignored</span>
-                <strong>42,069</strong>
-              </div>
-              <div class="status-row">
-                <span>Threats detected</span>
-                <strong>0</strong>
-              </div>
-              <div class="status-row">
-                <span>Questions asked</span>
-                <strong>0</strong>
-              </div>
-            </div>
-          </div>
-          <div class="stamp" aria-hidden="true">TRUST US</div>
-        </div>
       </section>
 
-      <section class="ticker" aria-label="Company highlights">
-        <div>
-          <span>0 threats detected</span>
-          <span>100% files approved</span>
-          <span>30-day no-questions-because-we-didn't-look guarantee</span>
-          <span>0 threats detected</span>
-          <span>100% files approved</span>
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="section-heading reveal">
+          <p class="section-number">01 / Leadership</p>
+          <h2 id="about-title">Lead clearly.<br />Develop people.<br />Improve the system.</h2>
         </div>
-      </section>
-
-      <section class="section inventory" id="inventory" aria-labelledby="inventory-title">
-        <div class="section-heading">
-          <p class="section-kicker">Aisle 01 / Inventory</p>
-          <h2 id="inventory-title">Protection for every level of denial.</h2>
-          <p>Every plan includes our industry-leading promise to never inconvenience you with bad news.</p>
-        </div>
-
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-code">SKU: NAH-001</div>
-            <p class="product-tier">Home Basic</p>
-            <h3>AV Pallet</h3>
-            <p>Perfect for one computer and the one folder you definitely did not download from a forum.</p>
-            <ul>
-              <li>One-click optimism</li>
-              <li>Weekly decorative scans</li>
-              <li>Zero alarming pop-ups</li>
-            </ul>
-            <p class="price"><span>$</span>0<small>/forever-ish</small></p>
-            <a href="#scanner" class="product-link">Try absolutely nothing →</a>
-          </article>
-
-          <article class="product-card product-card-featured">
-            <div class="featured-label">Most trusted by people who don't read dialogs</div>
-            <div class="product-code">SKU: NOPE-404</div>
-            <p class="product-tier">Professional</p>
-            <h3>Threat Blindfold Pro</h3>
-            <p>Advanced peace of mind for power users with too many browser toolbars and nothing to hide.</p>
-            <ul>
-              <li>Real-time non-monitoring</li>
-              <li>Unlimited false reassurance</li>
-              <li>Priority hold music</li>
-            </ul>
-            <p class="price"><span>$</span>19<small>/questionable decision</small></p>
-            <a href="#scanner" class="product-link">Become unbothered →</a>
-          </article>
-
-          <article class="product-card">
-            <div class="product-code">SKU: YOLO-9000</div>
-            <p class="product-tier">Enterprise</p>
-            <h3>Compliance Theater</h3>
-            <p>For organizations that need a green dashboard before the auditor reaches the parking lot.</p>
-            <ul>
-              <li>Executive-grade pie charts</li>
-              <li>One enormous green checkmark</li>
-              <li>PDF reports with tiny footnotes</li>
-            </ul>
-            <p class="price"><span>$</span>Call<small>/your procurement maze</small></p>
-            <a href="#scanner" class="product-link">Schedule a vague demo →</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section scan-section" id="scanner" aria-labelledby="scanner-title">
-        <div class="scan-copy">
-          <p class="section-kicker">Aisle 02 / Free scan</p>
-          <h2 id="scanner-title">Put our indifference to the test.</h2>
-          <p>
-            Our scanner uses a proprietary algorithm consisting primarily of a timer and a predetermined answer.
-            No files are uploaded, inspected, judged, or even acknowledged.
+        <div class="about-content">
+          <p class="lead reveal">
+            My leadership style is hands-on and outcome-focused: create clarity in complex situations, help engineers
+            grow through difficult work, and turn lessons from escalations into stronger processes, guidance, and tools.
           </p>
-          <div class="scan-badges" aria-label="Fake scanner features">
-            <span>No installation</span>
-            <span>No file access</span>
-            <span>No useful output</span>
+          <div class="strength-grid">
+            <article class="strength-card reveal">
+              <span class="card-number">01</span>
+              <h3>Technical team leadership</h3>
+              <p>I lead and mentor escalation engineers across multi-product security environments, pairing technical depth with accountability and knowledge sharing.</p>
+            </article>
+            <article class="strength-card reveal">
+              <span class="card-number">02</span>
+              <h3>Escalation ownership</h3>
+              <p>I coordinate customers, frontline support, and Engineering through high-impact investigations, defect validation, and resolution.</p>
+            </article>
+            <article class="strength-card reveal">
+              <span class="card-number">03</span>
+              <h3>Operational improvement</h3>
+              <p>I build Python- and API-driven workflows for case triage, reporting, operational visibility, and repeatable troubleshooting.</p>
+            </article>
+            <article class="strength-card reveal">
+              <span class="card-number">04</span>
+              <h3>Military leadership</h3>
+              <p>I retired as a U.S. Army Chief Warrant Officer III after leading cyber operations, training, qualification, and technical standards.</p>
+            </article>
           </div>
-        </div>
-
-        <div class="scan-console" data-scan-console>
-          <div class="console-header">
-            <span>FRANKS' RAPID THREAT ASSESSMENT</span>
-            <span class="console-light" aria-hidden="true"></span>
-          </div>
-          <div class="console-screen" aria-live="polite">
-            <p data-scan-line>&gt; Ready to inspect absolutely nothing.</p>
-            <div class="progress-track" aria-hidden="true"><span data-scan-progress></span></div>
-            <div class="scan-result" data-scan-result hidden>
-              <span class="result-icon">✓</span>
-              <div>
-                <strong>ALL CLEAR!</strong>
-                <p>We didn't look, but confidence is high.</p>
-              </div>
-            </div>
-          </div>
-          <button class="scan-button" type="button" data-scan-button>Run highly scientific scan</button>
         </div>
       </section>
 
-      <section class="section guarantee" id="guarantee" aria-labelledby="guarantee-title">
-        <div class="guarantee-mark" aria-hidden="true">0</div>
-        <div class="guarantee-copy">
-          <p class="section-kicker">Aisle 03 / The guarantee</p>
-          <h2 id="guarantee-title">Zero detections.<br />Zero interruptions.<br />Zero idea what's happening.</h2>
+      <section class="ai-band" aria-labelledby="ai-title">
+        <div class="ai-signal reveal" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="ai-copy reveal">
+          <p class="section-number">Applied AI</p>
+          <h2 id="ai-title">AI is a force multiplier.<br />Judgment is the control plane.</h2>
           <p>
-            If Franks' AV Warehouse ever marks a file as malicious, send us a screenshot. We'll frame it, apologize,
-            and immediately retrain the detection engine to mind its own business.
+            I use AI and automation to improve research, synthesis, case triage, reporting, and knowledge access,
+            pairing machine speed with verification, security, and accountable human judgment.
           </p>
-          <blockquote>
-            “Finally, antivirus that treats every executable with the benefit of the doubt.”
-            <cite>— A definitely real customer</cite>
-          </blockquote>
         </div>
       </section>
 
-      <section class="warning-strip" aria-label="Important parody disclaimer">
-        <strong>Important:</strong>
-        <p>This is a parody website. Franks' AV Warehouse is not a real antivirus company or security product. Please use actual security software.</p>
+      <section class="section experience" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading reveal">
+          <p class="section-number">02 / Experience</p>
+          <h2 id="experience-title">Technical leadership built from the front line.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <p>May 2026 — Present</p>
+              <span>Cisco · Also Nov 2024 — Oct 2025</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Technical Leader, Escalations</h3>
+              <p>
+                Lead complex XDR and Secure Endpoint escalations, coordinating customers, frontline TAC, and
+                Engineering through difficult investigations. Reproduce defects, translate customer evidence into
+                actionable findings, mentor escalation engineers, and build workflows for case triage, reporting, and
+                operational visibility.
+              </p>
+              <ul class="tag-list" aria-label="Technical Leader focus areas">
+                <li>Critical escalations</li><li>Engineer mentoring</li><li>Defect reproduction</li><li>Operational reporting</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <p>Nov 2025 — May 2026</p>
+              <span>Cisco · Remote</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Leader, Software Engineering · People Manager</h3>
+              <p>
+                Led a Tier 3 escalation engineering team supporting Cisco Security Cloud Control, XDR, Secure Endpoint,
+                Orbital, Endpoint Visibility Module, and Secure Malware Analytics. Coached engineers on investigations
+                and customer communication while driving consistent case handling, knowledge sharing, accountability,
+                and cross-functional resolution with frontline support and Engineering.
+              </p>
+              <ul class="tag-list" aria-label="Software Engineering Leader focus areas">
+                <li>People management</li><li>Engineer coaching</li><li>Tier 3 support</li><li>Escalation management</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <p>Jan 2015 — Nov 2024</p>
+              <span>Cisco · North Carolina / Remote</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Product Support & Escalation Engineering</h3>
+              <p>
+                Progressed from Customer Support Engineer through Software Escalation Engineer IV, resolving complex
+                security issues across endpoint, network, cloud, web, email, malware analysis, threat intelligence, and
+                Firepower IDS/IPS. Partnered with Development, Test, Documentation, and Product Management to reproduce
+                defects, improve supportability, and inform product decisions.
+              </p>
+              <ul class="tag-list" aria-label="Product support focus areas">
+                <li>Root-cause analysis</li><li>Enterprise troubleshooting</li><li>Product partnership</li><li>Quality engineering</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-meta">
+              <p>May 2002 — Jul 2022</p>
+              <span>United States Army National Guard · Retired</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Cyber Operations Technician · Chief Warrant Officer III</h3>
+              <p>
+                Led a Cyber Operations and Signals Intelligence section, coordinating training, language qualifications,
+                and occupational certifications. Advised Command on cyberspace operations and cyber assets; trained,
+                mentored, and evaluated personnel; and developed technical SOPs, policies, and qualification standards.
+              </p>
+              <ul class="tag-list" aria-label="Military leadership focus areas">
+                <li>Cyber operations</li><li>Personnel development</li><li>Training programs</li><li>Standards & policy</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="section work" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <p class="section-number">03 / Selected work</p>
+          <h2 id="work-title">Make expertise repeatable.</h2>
+          <p class="section-intro">Examples of turning recurring support friction into reusable tooling and guidance that help teams investigate consistently. Many other projects cannot be shared externally due to customer data sensitivity.</p>
+        </div>
+        <div class="work-grid">
+          <a
+            class="work-card work-card-featured reveal"
+            href="https://github.com/mafranks/CSE_Health_Checker"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="work-card-top">
+              <span class="work-type">Diagnostic tooling</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
+            </div>
+            <h3>Windows Health Checker</h3>
+            <p>Created and maintain a host-level diagnostic tool to surface actionable insights and help prevent unnecessary technical-assistance cases.</p>
+            <span class="work-tech">Supportability · Diagnostics · View project ↗</span>
+          </a>
+
+          <a
+            class="work-card reveal"
+            href="https://github.com/CiscoSecurity/amp-05-windows-tune"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="work-card-top">
+              <span class="work-type">Performance tooling</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
+            </div>
+            <h3>Windows Tuning Tool</h3>
+            <p>Built a Python tool that surfaces top file and process scans to guide Secure Endpoint connector performance tuning.</p>
+            <span class="work-tech">Python · Analysis · View project ↗</span>
+          </a>
+
+          <article class="work-card work-card-static reveal">
+            <div class="work-card-top">
+              <span class="work-type">Technical guidance</span>
+            </div>
+            <h3>Documentation that resolves</h3>
+            <p>Published internal guidance, documentation, processes, and presentations for configuration, troubleshooting, and customer guidance for a variety of Cisco products.</p>
+            <span class="work-tech">Configuration · Troubleshooting · Customer guidance</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section credentials" aria-labelledby="credentials-title">
+        <div class="section-heading reveal">
+          <p class="section-number">04 / Foundation</p>
+          <h2 id="credentials-title">Technical depth, broadened by service and study.</h2>
+        </div>
+        <div class="credential-list">
+          <a
+            class="credential credential-link reveal"
+            href="https://www.credly.com/badges/99fcb1b1-d630-49a5-93c2-310d454e0733/linked_in_profile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Certification</span>
+            <div>
+              <h3>Splunk Core Certified User</h3>
+              <p>Splunk · Issued July 2026 · Valid through July 2029</p>
+            </div>
+            <p class="credential-year">2026</p>
+          </a>
+          <a
+            class="credential credential-link reveal"
+            href="https://www.credly.com/badges/4f5cfa66-0d8d-4920-82dc-45a0ebe1dcce/linked_in_profile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Certification</span>
+            <div>
+              <h3>Cisco Certified DevNet Specialist</h3>
+              <p>Security Automation and Programmability · Active until 2028</p>
+            </div>
+            <p class="credential-year">2020</p>
+          </a>
+          <a
+            class="credential credential-link reveal"
+            href="https://www.credly.com/badges/6548aad6-54a6-44ff-acab-68859383d7c9/linked_in_profile"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Certification</span>
+            <div>
+              <h3>CCNA Automation</h3>
+              <p>Cisco · Active until 2028</p>
+            </div>
+            <p class="credential-year">2020</p>
+          </a>
+          <article class="credential reveal">
+            <span>Certification</span>
+            <div>
+              <h3>CCNA Routing & Switching</h3>
+              <p>Cisco · Expired</p>
+            </div>
+            <p class="credential-year">2015</p>
+          </article>
+          <article class="credential reveal">
+            <span>Education</span>
+            <div>
+              <h3>B.S. Business Administration & Management</h3>
+              <p>Fayetteville State University · Magna Cum Laude · 4.0 GPA</p>
+            </div>
+            <p class="credential-year">2013</p>
+          </article>
+          <article class="credential reveal">
+            <span>Education</span>
+            <div>
+              <h3>A.A. Modern Standard Arabic</h3>
+              <p>Defense Language Institute</p>
+            </div>
+            <p class="credential-year">2009</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy reveal">
+          <p class="section-number">05 / Contact</p>
+          <h2 id="contact-title">Have a difficult problem worth solving?</h2>
+          <p>I’m interested in leadership opportunities where technical depth, customer advocacy, team development, and operational improvement come together.</p>
+        </div>
+        <div class="contact-actions reveal">
+          <a class="contact-link" href="mailto:matthew.franks@protonmail.com">
+            <span>Email</span>
+            <strong>matthew.franks@protonmail.com</strong>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/matthewfranks" target="_blank" rel="noreferrer">
+            <span>LinkedIn</span>
+            <strong>/in/matthewfranks</strong>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"></path></svg>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>
-        <strong>Franks' AV Warehouse</strong>
-        <p>Serving the greater Internet with reckless confidence since five minutes ago.</p>
-      </div>
-      <p>© <span data-year></span> Franks' AV Warehouse-ish</p>
-      <a href="#top">Back to loading dock ↑</a>
+      <p>© <span data-year></span> Matthew Franks</p>
+      <p>Built with curiosity, discipline, and a healthy suspicion of buzzwords.</p>
+      <a href="#top">Back to top ↑</a>
     </footer>
   </body>
 </html>
